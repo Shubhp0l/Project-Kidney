@@ -7,7 +7,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Project-Kidney"
 AUTHOR_USER_NAME = "debabratabhagat"
-SRC_REPO = "Project-Kidney"
+SRC_REPO = "projectKidney"
 AUTHOR_EMAIL = "aplha@gmail.com"
 
 setuptools.setup(
