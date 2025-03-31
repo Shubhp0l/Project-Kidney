@@ -1,2 +1,16 @@
 venv
 src/Project_Kidney.egg-info
+
+# Ignore artifacts directory
+artifacts
+artifacts/*
+
+# Ignore all running_logs.log files in any subdirectory
+**/running_logs.log
+**/**/running_logs.log
+
+# Ignore all __pycache__ directories
+**/__pycache__/
+
+# Ignore all Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
