@@ -54,3 +54,64 @@ x=================x]
 [2025-03-31 18:37:42,213: INFO: main: >>>>>> STAGE PREPARE BASE MODEL COMPLETED <<<<<< 
 
 x=================x]
+[2025-03-31 19:25:44,116: INFO: main: >>>>>> STAGE Data Ingestion stage STARTED <<<<<<]
+[2025-03-31 19:25:44,119: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-31 19:25:44,121: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-31 19:25:44,122: INFO: common: created directory at: artifacts]
+[2025-03-31 19:25:44,123: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-31 19:26:19,903: INFO: main: >>>>>> STAGE Data Ingestion stage COMPLETED <<<<<< 
+
+x=================x]
+[2025-03-31 19:26:19,903: INFO: main: >>>>>> STAGE PREPARE BASE MODEL STARTED <<<<<<]
+[2025-03-31 19:26:19,906: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-31 19:26:19,908: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-31 19:26:19,909: INFO: common: created directory at: artifacts]
+[2025-03-31 19:26:19,909: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-03-31 19:26:20,678: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-31 19:26:24,352: INFO: main: >>>>>> STAGE PREPARE BASE MODEL COMPLETED <<<<<< 
+
+x=================x]
+[2025-03-31 19:26:24,352: INFO: main: >>>>>> STAGE TRAINING STARTED <<<<<<]
+[2025-03-31 19:26:24,355: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-31 19:26:24,356: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-31 19:26:24,357: INFO: common: created directory at: artifacts]
+[2025-03-31 19:26:24,358: INFO: common: created directory at: artifacts/training]
+[2025-03-31 19:59:57,845: ERROR: main: 'TrainingConfig' object has no attribute 'trained_model_path']
+Traceback (most recent call last):
+  File "A:\Project-Kidney\main.py", line 41, in <module>
+    obj.main()
+  File "A:\Project-Kidney\src\projectKidney\pipeline\stage_03_training.py", line 23, in main
+    raise e
+  File "A:\Project-Kidney\src\projectKidney\pipeline\stage_03_training.py", line 20, in main
+    training.train()
+  File "A:\Project-Kidney\src\projectKidney\components\training.py", line 73, in train
+    self.save_model(path=self.config.trained_model_path, model=self.model)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TrainingConfig' object has no attribute 'trained_model_path'
+[2025-03-31 20:04:31,551: INFO: main: >>>>>> STAGE Data Ingestion stage STARTED <<<<<<]
+[2025-03-31 20:04:31,553: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-31 20:04:31,555: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-31 20:04:31,555: INFO: common: created directory at: artifacts]
+[2025-03-31 20:04:31,556: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-31 20:04:55,592: INFO: main: >>>>>> STAGE Data Ingestion stage COMPLETED <<<<<< 
+
+x=================x]
+[2025-03-31 20:04:55,592: INFO: main: >>>>>> STAGE PREPARE BASE MODEL STARTED <<<<<<]
+[2025-03-31 20:04:55,595: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-31 20:04:55,596: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-31 20:04:55,597: INFO: common: created directory at: artifacts]
+[2025-03-31 20:04:55,598: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-03-31 20:04:56,219: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-03-31 20:05:01,347: INFO: main: >>>>>> STAGE PREPARE BASE MODEL COMPLETED <<<<<< 
+
+x=================x]
+[2025-03-31 20:05:01,347: INFO: main: >>>>>> STAGE TRAINING STARTED <<<<<<]
+[2025-03-31 20:05:01,349: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-31 20:05:01,350: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-31 20:05:01,351: INFO: common: created directory at: artifacts]
+[2025-03-31 20:05:01,408: INFO: common: created directory at: artifacts/training]
+[2025-03-31 20:34:05,165: INFO: main: >>>>>> STAGE Data Ingestion stage STARTED <<<<<<]
+[2025-03-31 20:34:05,167: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-31 20:34:05,169: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-31 20:34:05,170: INFO: common: created directory at: artifacts]
+[2025-03-31 20:34:05,170: INFO: common: created directory at: artifacts/data_ingestion]

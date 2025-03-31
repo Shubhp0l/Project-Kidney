@@ -1,7 +1,7 @@
 from projectKidney.constants import *
 from projectKidney.utils.common import read_yaml, create_directories
-from projectKidney.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig
-
+from projectKidney.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig
+from pathlib import Path
 class configurationManager:
     def __init__(
         self, config_filepath=CONFIG_FILE_PATH, params_filepath=PARAMS_FILE_PATH
@@ -43,3 +43,23 @@ class configurationManager:
         )
 
         return prepare_base_model_config
+    
+    def get_training_config(self) -> TrainingConfig:
+        training = self.config.training
+        params = self.params
+        
+        training_data_path = Path(training.training_data_path)
+        create_directories([training.root_dir])
+
+        training_config = TrainingConfig(
+            root_dir=Path(training.root_dir),
+            trained_model_dir=Path(training.trained_model_path),
+            updated_base_model_path=self.config.prepare_base_model.modified_base_model_path,
+            training_data=training_data_path,
+            params_epochs=params.EPOCHS,
+            params_batch_size=params.BATCH_SIZE,
+            params_is_augmentation=params.AUGMENTATION,
+            params_image_size=params.IMG_SIZE,
+        )
+
+        return training_config
